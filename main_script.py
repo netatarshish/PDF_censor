@@ -38,8 +38,8 @@ if uploaded_file is not None:
             # Draw original page as image to be altered later
             pdf_to_image = page.to_image(resolution=300)
             image_bytes = io.BytesIO()
-            image_bytes.original.save(image_bytes, format="PNG")
-            image_bytes.seek(0) # Moves the pointer to the start
+            pdf_to_image.save(image_bytes, format="PNG")
+            image_bytes.seek(0)  # Moves the pointer to the start
             pdf_canvas.drawImage(ImageReader(image_bytes), 0, 0, width=letter[0], height=letter[1])
 
             # Scaling from PDF units to ReportLab units
