@@ -1,0 +1,5 @@
+streamlit
+pdfplumber
+reportlab
+presidio-analyzer
+presidio-anonymizer
